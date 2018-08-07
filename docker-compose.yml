@@ -1,0 +1,53 @@
+version: '2'
+services:
+  web:
+    image: 'nginx:latest'
+    container_name: web
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './:/shell'
+      - './docker/nginx/shell.conf:/etc/nginx/conf.d/default.conf'
+      - './docker/nginx/certs/book-selfsigned.crt:/etc/ssl/certs/book-selfsigned.crt'
+      - './docker/nginx/certs/book-selfsigned.key:/etc/ssl/private/book-selfsigned.key'
+    networks:
+      - backend
+      - frontend
+    restart: always
+  php:
+    build: ./docker/php/
+    container_name: php
+    volumes:
+      - './:/shell'
+    networks:
+      - backend
+    restart: always
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=cocktails_book
+    volumes:
+      - '~/db/mysql:/var/lib/mysql'
+    ports:
+      - "3306:3306"
+    networks:
+      - backend
+  # docker manager UI
+  portainer:
+      image: portainer/portainer
+      command: -H unix:///var/run/docker.sock
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - portainer_data:/data
+      ports:
+        - '9000:9000'
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+volumes:
+  portainer_data:
