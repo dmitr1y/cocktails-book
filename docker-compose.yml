@@ -28,7 +28,7 @@ services:
     container_name: mysql_db
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=cocktails_book
+      - MYSQL_DATABASE=cook_book
     volumes:
       - '~/db/mysql:/var/lib/mysql'
     ports:
