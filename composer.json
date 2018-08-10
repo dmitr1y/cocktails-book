@@ -1,8 +1,8 @@
 {
-    "name": "yiisoft/yii2-app-advanced",
+    "name": "Cook book",
     "description": "Yii 2 Advanced Project Template",
     "keywords": ["yii2", "framework", "advanced", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "homepage": "https://recipes.konstantinov.pw/",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
