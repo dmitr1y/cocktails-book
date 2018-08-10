@@ -60,5 +60,9 @@ return [
             // following line will restrict access to admin controller from frontend application
             'as frontend' => 'dektrium\user\filters\FrontendFilter',
         ],
+        'gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['*'] //TODO replace to localhost
+        ],
     ],
 ];
