@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace frontend\controllers;
 
 use Yii;
 use app\models\Ingredients;
@@ -123,5 +123,12 @@ class IngredientsController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionTest()
+    {
+        return $this->render('test', [
+            'model' => $this->findModel(2),
+        ]);
     }
 }

@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+}
+
+.first {
+    padding-top: 140px;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-image: url('https://realarrancheese.com/wp-content/uploads/2017/10/Cooking.jpg');
+}
+
+.first.ingredients {
+    background-image: url('https://thumbs.dreamstime.com/z/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D0%BE-%D0%B5%D1%88%D0%BD%D0%B8%D1%86%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5-%D0%BF%D0%BE%D1%81%D1%8B-%D0%BA%D0%B5-%D0%B7%D0%B5-%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE-%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%BA%D0%BE%D0%BD%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B0-bokeh-63818082.jpg');
+    background-position-y: center;
+}
+
+.first.instruments {
+    background-image: url('https://thumbs.dreamstime.com/z/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D0%BE-%D0%B5%D1%88%D0%BD%D0%B8%D1%86%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5-%D0%BF%D0%BE%D1%81%D1%8B-%D0%BA%D0%B5-%D0%B7%D0%B5-%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE-%D1%86%D0%B2%D0%B5%D1%82%D0%B0-%D0%BA%D0%BE%D0%BD%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B0-bokeh-63818082.jpg');
+    background-position-y: center;
+}
+
+.first.recipe {
+
+}
+
+.affix {
+    -webkit-transition: padding 0.2s ease-out;
+    -moz-transition: padding 0.2s ease-out;
+    -o-transition: padding 0.2s ease-out;
+    transition: padding 0.2s ease-out;
+}
+
+.affix-top {
+    /* navbar style at top */
+    background: transparent;
+    border-color: transparent;
+    padding: 15px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.affix-top .nav > li > a {
+    color: #000;
+}
+
+.affix-top .navbar-collapse {
+    border-color: transparent;
+    box-shadow: initial;
+}
+
+section {
+    height: calc(90% - 50px);
+    height: 90vh;
+}
